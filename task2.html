@@ -1,0 +1,37 @@
+<!-- Реализуйте последний 2 слайда в презентации с помощью пройденого на уроке материала 
+во втором слайде достаточно в окнсоль лог, чтоб унаследовалось и изменилось-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+    <script>
+        function Man(walk, eat, drink) {
+            this.walk = walk;
+            this.eat = eat;
+            this.drink = drink;
+        }
+
+        let firstMan = new Man(true, true, true);
+        console.log(firstMan)
+
+        function Soldier (shoot) {
+            this.shoot = shoot;
+        }
+
+        Soldier.prototype = new Man (true, true, true);
+        let firstSoldier = new Soldier (true);
+        console.log(firstSoldier);
+
+        function Doctor (cure) {
+            this.cure = cure;
+        }
+
+        Doctor.prototype = new Man (true, true, true);
+        let firstDoctor = new Doctor (true);
+        console.log(firstDoctor)
+    </script>
+</body>
+</html>

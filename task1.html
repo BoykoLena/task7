@@ -1,0 +1,25 @@
+<!-- Создайте функцию, которая возвращает день недели для даты. День нужно возвратить в 
+    формате - понедельник имеет номер 1, вторник номер 2, …, воскресенье - номер 7. 
+Например, пишем 1 января 2019 года и оно нам возвращает день недели который был-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+
+    <script>
+        function getLocalDay () {
+            let dayOfWeek = date.getDay();
+            if (dayOfWeek == 0) {
+                dayOfWeek = 7;
+            }
+            return dayOfWeek;
+        }
+
+        let date = new Date (2020, 2, 8);
+        alert(getLocalDay(date));
+    </script>
+</body>
+</html>
